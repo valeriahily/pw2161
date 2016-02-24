@@ -1,0 +1,9 @@
+body 
+{
+	background: rgb(150,0,0); /*fondo redgreenblue*/
+	color: #000000; /*letra*/
+	margin:0 auto; /*0 no hay movimiento vertical, auto mov horizontal (lo divide equitativamente)*/
+	max-width: 1024px; /*ancho determinado de la pantalla*/
+	/*color: hotpink;*/
+
+}
