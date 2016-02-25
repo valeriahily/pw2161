@@ -1,9 +1,39 @@
 body 
 {
-	background: rgb(150,0,0); /*fondo redgreenblue*/
+	background: rgb(205,145,148); /*fondo redgreenblue*/
 	color: #000000; /*letra*/
 	margin:0 auto; /*0 no hay movimiento vertical, auto mov horizontal (lo divide equitativamente)*/
 	max-width: 1024px; /*ancho determinado de la pantalla*/
 	/*color: hotpink;*/
 
+}
+
+header
+{
+	background: thistle;
+	border: 1px solid black; /*alrededor*/
+	border-radius:  5px; /*esquinas*/
+	color: white; /*letra*/
+}
+
+header h1
+{
+	text-align: center; /*centrar*/
+}
+
+header nav ul li
+{
+	/*border: 1px solid black;*/
+	background: white;
+	border-radius: 5px;
+	color: black;
+	display: inline-block; /*rompe caja*/
+	margin: 0px 50px; /*arriba derecha abajo izquierda*/
+	padding: 10px; /*se le aplica un margin interno a toda la caja*/
+}
+
+header nav ul li:hover /*cuando al li le ponga el mouse encima*/
+{
+	background: black;
+	color: white;
 }
