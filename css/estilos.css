@@ -18,7 +18,17 @@ header
 
 header h1
 {
+	text-shadow: 5px 5px 10px black;
 	text-align: center; /*centrar*/
+}
+
+header img
+{
+	/*logo tec*/
+	float: right;
+	margin-right: 20px;
+	margin-top: 20px;
+	width: 80px;
 }
 
 header nav ul li
@@ -26,9 +36,10 @@ header nav ul li
 	/*border: 1px solid black;*/
 	background: white;
 	border-radius: 5px;
+	box-shadow: -5px -5px gray; /*sombra de caja*/
 	color: black;
 	display: inline-block; /*rompe caja*/
-	margin: 0px 50px; /*arriba derecha abajo izquierda*/
+	margin: 0px 40px; /*arriba derecha abajo izquierda*/
 	padding: 10px; /*se le aplica un margin interno a toda la caja*/
 }
 
@@ -36,4 +47,17 @@ header nav ul li:hover /*cuando al li le ponga el mouse encima*/
 {
 	background: black;
 	color: white;
+}
+
+/*Aquí van los ID's*/
+#seccion1 
+{
+	border: 10px solid red;
+}
+#seccion1 article
+{
+	border: 10px solid black; /*enmarcando los artic que estan dentro de la seccion 1*/
+	display: inline-block; /*no abarcará el ancho de la pantalla*/
+	vertical-align: top; /*alineacion vertical hasta arriba*/
+	width: 47.8%; /*ancho de cajas*/
 }
