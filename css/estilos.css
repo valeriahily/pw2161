@@ -18,6 +18,7 @@ header
 
 header h1
 {
+	font-family: 'Lato', sans-serif;
 	text-shadow: 5px 5px 10px black;
 	text-align: center; /*centrar*/
 }
@@ -33,13 +34,14 @@ header img
 
 header nav ul li
 {
+	font-family: 'Quicksand', sans-serif;
 	/*border: 1px solid black;*/
 	background: white;
 	border-radius: 5px;
 	box-shadow: -5px -5px gray; /*sombra de caja*/
 	color: black;
 	display: inline-block; /*rompe caja*/
-	margin: 0px 40px; /*arriba derecha abajo izquierda*/
+	margin: 0px 30px; /*arriba derecha abajo izquierda*/
 	padding: 10px; /*se le aplica un margin interno a toda la caja*/
 }
 
