@@ -1,0 +1,30 @@
+body
+{
+	border: 1px solid blue;
+	font-size: 16px;
+	margin: 0 auto; /*centrar la caja de body*/
+	max-width: 1024px; /*maximo de ancho*/
+}
+
+header
+{
+	background: #B3D8EB;
+}
+
+header nav
+{
+	background: #0E6CB0; /*color de nav*/
+	border-radius: 5px;
+	padding: 2px 0px 2px 0px;
+}
+header nav ul li
+{
+	color: white;
+	display: inline-block; /*romper modelo de caja*/
+	margin-right: 20px; /*separar las letras*/
+}
+
+#logo
+{
+margin-top: -200px;
+}
