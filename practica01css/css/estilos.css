@@ -1,7 +1,7 @@
 body
 {
 	border: 1px solid blue;
-	font-size: 16px;
+	font-size: 16px;/*1em*/
 	margin: 0 auto; /*centrar la caja de body*/
 	max-width: 1024px; /*maximo de ancho*/
 }
@@ -54,6 +54,41 @@ margin-top: -200px;
 	border: 5px solid rgba(150,150,150, 0.5);
 	margin-top: 15px;
 	width: 98%;
+}
+
+#seccion02
+{
+	margin: 0 auto;
+}
+
+#seccion02 article
+{
+	display: inline-block;
+	vertical-align: top; /*para que los article se suban a top (hasta arriba)*/
+	width: 32.8%;
+}
+
+#boton01, #boton02
+{
+	background: white;
+	border-radius: 4px;
+	color: blue;
+	margin-left: 45%;
+		padding: 3px 4px 3px 4px;
+}
+
+.otraSeccion, .unaSeccion
+{
+	font-weight: bold; /*se convierte la fuente en negrita*/
+}
+
+.otraSeccion
+{
+	font-size: 2.5em;
+}
+.unaSeccion /*como es una clase empieza con un punto*/
+{
+	font-size: 4.5em;
 }
 
 
