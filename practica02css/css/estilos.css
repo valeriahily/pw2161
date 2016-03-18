@@ -1,0 +1,95 @@
+body 
+{
+	border: 1px solid red;
+	font-size: 16px;
+	margin: 0 auto; /*centrar pantalla*/
+	max-width: 1078px; /*el diseñador lo quiso*/
+}
+
+header input
+{
+	float: right; 
+	margin-right: -250px;
+	position: relative;
+}
+
+header nav
+{
+	margin-left: 220px; /*mover el nav*/
+}
+
+header nav ul li
+{
+	border-bottom: 1px solid gray; /*subrayar*/
+	color: gray;
+	display: inline-block;
+	font-size: 1.2em;
+	margin-right: 15px; /*separar*/
+
+}
+
+#bgoffer
+{
+	left:19.2%; /*se manda hacia la izquierda*/
+	/*left, top, bottom, right */
+	position: absolute;
+	top: 150px;
+}
+
+#granthams
+{
+	margin-top: 20px;
+	margin-left: 25px;
+}
+
+#paint 
+{
+	float: right; /*se manda la imagen paint hacia la derecha*/
+	margin-top: 20px; /*se baja la imagen y queda pegado*/
+}
+
+#primerSeccion
+{
+	margin-top: 80px;
+}
+
+#primerSeccion article
+{
+	display: inline-block;
+	margin-left: 25px;
+	vertical-align: top; /*se alineara hacia arriba*/
+}
+
+#secc01art01
+{
+	width: 60%;
+}
+
+#secc01art02
+{
+	width: 30%;
+}
+
+#segundaSeccion article
+{
+	text-align: right;
+}
+
+.numerotelefono
+{
+	color: #FF0099;
+	font-size: 2.5em;
+	font-weight: bold;
+}
+
+#terceraSeccion article img 
+{
+	vertical-align: middle; /*alineando la imagen*/
+}
+
+.wecanoffer
+{
+	color: #FF0099; /*color rosao*/
+	font-size: 3.5em;
+	font-weight: bold; 
+}

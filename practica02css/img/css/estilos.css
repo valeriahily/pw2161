@@ -1,0 +1,7 @@
+body 
+{
+	border: 1px solid red;
+	font-size: 16px;
+	margin: 0 auto; /*centrar pantalla*/
+	max-width: 1078px; /*el diseñador lo quiso*/
+}
