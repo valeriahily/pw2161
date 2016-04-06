@@ -1,0 +1,80 @@
+body
+{
+	margin: 0 auto;
+	width: 1024px;
+}
+
+header nav ul li
+{
+	display: inline-block;
+	margin: 10px;
+}
+
+header
+{
+	border: 1px solid black;
+}
+
+header nav
+{
+	background: orange;
+	color: white;
+	border-radius: 6px; 
+}
+
+#primerSeccion
+{
+	width: 60%;  /*Para  abarcar cierto porcentaje del body*/
+}
+
+#segundaSeccion
+{
+	width: 38%;
+}
+
+#primerSeccion, #segundaSeccion
+{
+	display: inline-block; /*Para alinear las dos secciones horizontalmente*/
+	vertical-align: top; /*Para alinearlos verticalmente*/
+}
+
+#boton01
+{
+	margin-top: 10px;	
+	color: white;
+	background: gray;
+	border: none;
+	border-radius: 6px;
+	padding: 6px;
+}
+
+#inf
+{
+	background: #F4F4F4;
+	border-bottom:1px solid #999999; /*Para ponerle sombreado a la parte baja de inf*/
+	border-radius: 12px;
+	padding: 6px; 
+}
+
+#lore
+{
+	width: 56%;
+}
+
+#post
+{
+	width: 38%; /*Respecto al article que lo contiene*/
+}
+
+
+#lore, #post
+{
+	border:1px solid black;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#secc01art02
+{
+	border:1px solid black;
+}
