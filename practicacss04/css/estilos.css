@@ -1,0 +1,29 @@
+body
+{
+	margin 0: auto;
+	width: 1024px;
+}
+
+header
+{
+	background: #265D8E;
+
+}
+
+nav
+{
+	background: #ECECEE;
+	text-align: right;
+}
+
+#logo
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nmi
+{
+
+}

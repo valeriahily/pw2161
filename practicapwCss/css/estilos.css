@@ -6,7 +6,7 @@ body
 
 header nav ul li
 {
-	display: inline-block;
+	display: inline-block; /*romper caja y queden alineados */
 	margin: 10px;
 }
 
@@ -20,6 +20,7 @@ header nav
 	background: #DD4812;
 	border-radius: 6px; 
 	color: white;	
+	font-weight: bold;
 }
 
 #primerSeccion
@@ -47,27 +48,10 @@ header nav
 	border-radius: 6px;
 	padding: 6px;
 }
-
-#buscador
-{
-	background: #DD4812;
-	border-radius: 12px;
-	color: white;
-	display: inline-block;
-	margin: 10px;
-	text-align: center;
-	width: 100%; /*tome todo el ancho el fonto*/
-}
-
+ 
 #categoria
 {
-	background: #DD4812;
-	border-radius: 12px;
-	color: white;
-	display: inline-block;
-	margin: 10px;
-	text-align: center;
-	width: 100%;
+
 }
 
 #inf
@@ -88,17 +72,6 @@ header nav
 	width: 38%; /*Respecto al article que lo contiene*/
 }
 
-#publicidad
-{
-	background: #DD4812;
-	border-radius: 12px;
-	color: white;
-	display: inline-block;
-	margin: 10px;
-	text-align: center; /*centrar*/
-	width: 100%;
-}
-
 #lore, #post
 {
 	border:1px solid black;
@@ -109,4 +82,15 @@ header nav
 #secc01art02
 {
 	border:1px solid black;
+}
+
+.extras
+{
+	background: #DD4812;
+	border-radius: 12px;
+	color: white;
+	display: inline-block;
+	margin: 10px;
+	text-align: center;
+	width: 100%;	
 }
