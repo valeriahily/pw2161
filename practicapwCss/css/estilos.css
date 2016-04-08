@@ -7,12 +7,13 @@ body
 header nav ul li
 {
 	display: inline-block; /*romper caja y queden alineados */
+	font-family: Arial;
 	margin: 10px;
 }
 
 header
 {
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 }
 
 header nav
@@ -21,6 +22,60 @@ header nav
 	border-radius: 6px; 
 	color: white;	
 	font-weight: bold;
+}
+
+
+#boton01
+{
+	margin-top: 10px;	
+	color: white;
+	background: #A6BCBA;
+	border: none;
+	border-radius: 6px;
+	padding: 6px;
+}
+ 
+#categoria
+{
+	margin: 10px;
+}
+
+#inf
+{
+	background: #F4F4F4;
+	border-bottom:1px solid #999999; /*Para ponerle sombreado a la parte baja de inf*/
+	border-radius: 12px;
+	padding: 6px; 
+}
+
+#imgpost
+{
+	border-bottom: 7px solid #A6BCBA;
+	border-left: 7px solid #A6BCBA;
+	border-right: 7px solid #A6BCBA;
+	border-top: 7px solid #A6BCBA;
+	margin-bottom: 7px;
+	margin-left: 7px;
+	margin-right: 7px;
+	margin-top: 7px;
+}
+
+#lore
+{
+	width: 56%;
+}
+
+#post
+{
+	width: 38%; /*Respecto al article que lo contiene*/
+}
+
+#lore, #post
+{
+	/*border:1px solid black;*/
+	display: inline-block;
+	vertical-align: top;
+	margin-right: -40px; /*movi el texto a la izquierda*/
 }
 
 #primerSeccion
@@ -39,49 +94,50 @@ header nav
 	vertical-align: top; /*Para alinearlos verticalmente*/
 }
 
-#boton01
-{
-	margin-top: 10px;	
-	color: white;
-	background: gray;
-	border: none;
-	border-radius: 6px;
-	padding: 6px;
-}
- 
-#categoria
-{
 
-}
-
-#inf
+#redes
 {
-	background: #F4F4F4;
-	border-bottom:1px solid #999999; /*Para ponerle sombreado a la parte baja de inf*/
-	border-radius: 12px;
-	padding: 6px; 
-}
-
-#lore
-{
-	width: 56%;
-}
-
-#post
-{
-	width: 38%; /*Respecto al article que lo contiene*/
-}
-
-#lore, #post
-{
-	border:1px solid black;
-	display: inline-block;
-	vertical-align: top;
+	float: right;
+	margin-right: 20px;
+	margin-top: 15px;
 }
 
 #secc01art02
 {
-	border:1px solid black;
+	/*border:1px solid black;*/
+}
+
+#sear
+{
+	background: white;
+	border-radius: 5px;
+}
+
+#search
+{
+	background: #F4F4F4;
+	border-bottom:1px solid #999999; 
+	border-radius: 12px;
+	color: black;
+	padding-left: 10px;
+	margin-right: -17px;
+	margin-top: -1px;
+}
+
+#titulo
+{
+	color: gray;
+	font-family: Arial;
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.publicidad
+{
+	width: 45%;
+	margin-left: 17px;	
+
 }
 
 .extras
@@ -90,7 +146,16 @@ header nav
 	border-radius: 12px;
 	color: white;
 	display: inline-block;
-	margin: 10px;
+	font-family: Arial;
+	font-weight: bold;
+	margin: 5px;
+	padding: 5px;
 	text-align: center;
 	width: 100%;	
+}
+
+.redes
+{
+	margin-top: 10px;
+    margin-right: 10px; /*separacion*/
 }

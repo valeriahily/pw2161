@@ -1,6 +1,6 @@
 body
 {
-	margin 0: auto;
+	margin: 0 auto;
 	width: 1024px;
 }
 
@@ -12,8 +12,26 @@ header
 
 nav
 {
+	border-radius: 3px;
 	background: #ECECEE;
 	text-align: right;
+}
+
+section ul li
+{
+	list-style:none;
+}
+
+#cubo1
+{
+	text-align: center;
+}
+
+#examp	
+{
+	background: #20507B;
+	color: white;
+	width: 70%;
 }
 
 #logo
@@ -23,7 +41,60 @@ nav
 	margin-right: auto;
 }
 
+#panelinks
+{
+	background: #265D8E;
+	color: white;
+	padding: 10px;
+	width: 76.5%;
+}
+
+#panelprogress
+{
+	background: #20507B;
+	color: white;
+	padding: 10px;
+	width: 76%;
+}
+
+#segundaSeccion
+{
+	width: 66%;
+}
+
+#secc01art02
+{
+	/*border: 1px solid black;*/
+	background: #FEFEFE;
+}
+
+#secc02art01
+{
+	display: inline-block;
+}
+
+#primerSeccion, #segundaSeccion
+{
+	display: inline-block; /*Para alinear las dos secciones horizontalmente*/
+}
+
+#primerSeccion
+{
+	background: #ECECEE;
+	border-left: 20px solid #ECECEE;
+	border-bottom: 20px solid #ECECEE;
+	border-right: 20px solid #ECECEE;
+	font-family: "Tahoma", "Geneva", sans-serif;
+	width: 30%;
+}
+
+.barras
+{
+	width: 80%;
+}
+
 .nmi
 {
-
+ 	border-bottom: 20px solid #ECECEE;
+ 	border-right: 30px solid #ECECEE;
 }
