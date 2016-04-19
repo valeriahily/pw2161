@@ -1,0 +1,66 @@
+body 
+{
+	margin: 0 auto;
+	width: 1024px;
+}
+
+header
+{
+	border: 1px solid black;
+}
+header nav ul li
+{
+	display: inline-block;
+	font-family: Arial;
+}
+
+header nav
+{
+	color: black;
+	padding-right: 30px;
+}
+
+#contenido
+{
+	color: #CCCBCC;
+}
+
+#first
+{
+	color: black;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#bike
+{
+	border: 1px solid black;
+
+}
+
+#l1
+{
+	float: right;
+}
+
+#l2
+{
+	float: right;
+}
+
+#l3
+{
+	float:right;
+}
+
+#miles
+{
+	color: #CCCBCC;
+}
+
+#secc02art01
+{
+	color:#CCCBCC;
+}
+
