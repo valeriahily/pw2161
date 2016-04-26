@@ -9,11 +9,11 @@ function juega()
 	{
 		if(cont%2==0)
 		{
-			document.getElementbyId('td1').innerHTML=="X";
+			document.getElementbyId('td1').innerHTML=='X';
 		}
 		else
 		{
-			document=getElementbyId('td1').innerHTML=="O";
+			document=getElementbyId('td1').innerHTML=='O';
 		}	
 	}
 
