@@ -20,9 +20,12 @@ var inicio = function()
 		  url: 'https://randomuser.me/api/',
 		  dataType: 'json',
 		  success: function(data){
-		  console.log(data);
-		  alert(data.results[0].name.first+
-		  	    " "+data.results[0].name.last);
+			  console.log(data);
+			  //alert(data.results[0].name.first+ " "+data.results[0].name.last);
+			  //Mostramos la informacion en el HTML
+			  $("#fotoPersona").attr("src",data.results[0].picture.medium);
+			  $("#txtNombreUser").html(data.results[0].name.first);
+			  $("#txtApellidoUser").html(data.results[0].name.last);
 		  },
 		  error:function(xhr,error,throws){
 		  	console.log("Ocurrio un error");
