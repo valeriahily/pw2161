@@ -13,16 +13,33 @@
 		<h1>Sistema de Ejemplo</h1>
 		<nav>
 			<ul>
-				<li>Inicio</li>
-				<li>Altas</li>
-				<li>Bajas</li>
-				<li>Cambios</li>
-				<li>Consultas</li>
-				<li>Salir</li>
+				<li><button class="btn btn-default">Inicio</li>
+				<li><button class="btn btn-primary">Altas</li>
+				<li><button class="btn btn-primary">Bajas</li>
+				<li><button class="btn btn-warning">Cambios</li>
+				<li><button class="btn btn-danger">Consultas</li>
+				<li><button class="btn btn-info">Salir</li>
 			</ul>
 		</nav>
 	</header>
-	<main></main>
+	<main>
+		<section>
+			<article>
+					<article class="panel panel-primary" id="datosUsuario"> 
+					    <article class="panel-heading">
+		 				   <h3 class="panel-title">Proporcione sus datos</h3>
+		  				</article>
+		  				<article class="panel-body">
+		 				   <form action="#" id="frmValidaEntrada">
+		 				   	<input type="text" id="txtUsuario" required placeholder="Usuario" class="form-control" autofocus>
+		 				   	<input type="password" id="txtClave" required placeholder="Contraseña" class="form-control">
+		 				   	<input type="submit" class="btn btn-success btn-lg btn-block" value="Entrar">
+		 				   </form>
+		 				 </article>
+					</article>
+			</article>
+		</section>
+	</main>
 	<footer></footer>
 </body>
 </html>
