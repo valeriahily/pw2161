@@ -38,18 +38,25 @@ var iniciaApp = function()
 			beforeSend: function(){
 				console.log("Validar al usuario");
 			},
-			cache: false,
+			cache: false, 
 			type: "POST", //Enviar datos
 			dataType: "json", //Como recibir los datos
-			ulr:"php/funciones.php" //Donde los vamos a mandar
+			ulr:"php/funciones.php", //Donde los vamos a mandar
 			data:parametros,
 			success: function(response){
-
+				if(response.respuesta == true)
+				{
+					$("#datosUsuario").hide();
+					$("nav").show("slow");
+				}
+				else
+				{
+					alert("Usuario y/o Contraseña incorrecto(s)");
+				}
 			},
 			error: function(xhr,ajax0ptionx,thrownError){
 				console.log("Algo salió mal");
 			}
-
 		});
 
 		console.log("Se disparó el submit");
