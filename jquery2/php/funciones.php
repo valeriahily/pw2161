@@ -38,7 +38,7 @@ function validaEntrada()
 	$conexion = mysql_connect("localhost","root","");
 	//Seleccionar la BD
 	mysql_select_db("cursopw");
-	$validar = sprintf("select usuario, clave from usuario where usuario=%s and clave=%s limit 1",$usuario,$clave);
+	$validar = sprintf("select usuario,clave from usuarios where usuario=%s and clave=%s limit 1",$usuario,$clave);
 	$resultado = mysql_query($validar);
 	//Preguntamos si se trajo un registro
 	if(mysql_num_rows($resultado) > 0)
@@ -53,7 +53,7 @@ function validaEntrada()
 $accion = $_POST["accion"];
 //Menu principal
 switch ($accion) {
-	case 'validaEntrada':
+	case 'validarEntrada':
 		validaEntrada(); //Se ejecuta la funcion
 		break;
 	

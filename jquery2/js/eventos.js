@@ -15,7 +15,7 @@ var iniciaApp = function()
 		}
 		if(clave == "")
 		{
-			alert("El clave no deber ser vacío");
+			alert("La clave no deber ser vacío");
 			$("#txtClave").focus();
 		}
 		// ** 2.-Verificar usuario y contraseña SIN PHP **
@@ -30,7 +30,7 @@ var iniciaApp = function()
 		// {
 		// 	alert("Usuario y/o contraseña incorrecta(s)");
 		// }
-		var parametros = "accion=validaEntrada"+
+		var parametros = "accion=validarEntrada"+
 						 "&usuario="+usuario+
 						 "&clave="+clave+
 						 "&id="+Math.random(); //Para no utilizar el cache
@@ -41,7 +41,7 @@ var iniciaApp = function()
 			cache: false, 
 			type: "POST", //Enviar datos
 			dataType: "json", //Como recibir los datos
-			ulr:"php/funciones.php", //Donde los vamos a mandar
+			url:"php/funciones.php", //Donde los vamos a mandar
 			data:parametros,
 			success: function(response){
 				if(response.respuesta == true)

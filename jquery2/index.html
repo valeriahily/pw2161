@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -39,6 +40,21 @@
 					</article>
 			</article>
 		</section>
+		<secion>
+			<article id="altaUsuarios">
+				<h2>Alta de Usuarios</h2>
+				<form action="#" id="frmAltaUsuarios" name="frmAltaUsuarios">
+					<input type="text" class="form-control" id="txtNombreUsuario" placeholder="Usuario" required>
+					<input type="password" class="form-control" id="txtClaveUsuario" placeholder="Clave" name="txtClaveUsuario"required>
+					<select name="txtTipoUsuario" id="txtTipoUsuario" class="form-control">
+						<option value="vigente">Vigente</option>
+						<option value="baja">Baja</option>
+					</select>
+					<input type="text" class="form-control" id="txtDepartamento" name="txtDepartamento" placeholder="Departamento" required>
+					<input type="submit" id="btnAltaUsuario" name="btnAltaUsuario" class="btn btn-succes btn-lg btn-block" required>
+				</form>
+			</article>
+		</secion>
 	</main>
 	<footer></footer>
 </body>
