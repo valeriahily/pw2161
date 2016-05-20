@@ -1,23 +1,26 @@
 var iniciaApp = function()
 {
 	var validarEntrada = function()
-	{
-		//Invalida los eventos que no corresponden a esta funcion
+	{			
+		//Invalida los eventos que 
+		//no corresponden a esta función.	
 		event.preventDefault();
 		var usuario = $("#txtUsuario").val();
 		var clave   = $("#txtClave").val();
-		// *Validaciones*
-		//1.-Que no sean vacios
+		//******** Validaciones **********
+		//1.- Que no sean vacíos
 		if(usuario == "")
 		{
-			alert("El usuario no deber ser vacío");
+			alert("El usuario no debe ser vacío");
 			$("#txtUsuario").focus();
 		}
 		if(clave == "")
 		{
-			alert("La clave no deber ser vacío");
+			alert("La clave no debe ser vacía");
 			$("#txtClave").focus();
 		}
+
+		//SIN PHP
 		// ** 2.-Verificar usuario y contraseña SIN PHP **
 		// if(usuario == "pw" && clave == "1234")
 		// {
@@ -30,42 +33,48 @@ var iniciaApp = function()
 		// {
 		// 	alert("Usuario y/o contraseña incorrecta(s)");
 		// }
-		var parametros = "accion=validarEntrada"+
-						 "&usuario="+usuario+
-						 "&clave="+clave+
-						 "&id="+Math.random(); //Para no utilizar el cache
+
+		//2.- Verificar usuario y contraseña
+		var parametros="accion=validaEntrada"+
+					   "&usuario="+usuario+
+					   "&clave="+clave+
+					   "&id="+Math.random(); 
 		$.ajax({
-			beforeSend: function(){
+			beforeSend:function(){
 				console.log("Validar al usuario");
 			},
-			cache: false, 
-			type: "POST", //Enviar datos
-			dataType: "json", //Como recibir los datos
-			url:"php/funciones.php", //Donde los vamos a mandar
+			cache: false,
+			type: "POST",
+			dataType: "json",
+			url:"php/funciones.php",
 			data:parametros,
 			success: function(response){
-				if(response.respuesta == true)
+				if(response.respuesta == true) //¬¬
 				{
 					$("#datosUsuario").hide();
 					$("nav").show("slow");
 				}
 				else
 				{
-					alert("Usuario y/o Contraseña incorrecto(s)");
+					alert("Usuario/contraseña incorrecto(s)");
 				}
 			},
-			error: function(xhr,ajax0ptionx,thrownError){
+			error: function(xhr,ajaxOptions,thrownError){
 				console.log("Algo salió mal");
 			}
 		});
-
 		console.log("Se disparó el submit");
 	}
 
 	var Altas = function()
 	{
-		//Mostrarmos el formulario de altas
-		$("#altaUsuarios").show("slow)");
+		//Mostramos el formulario
+		$("#altaUsuarios").show("slow");
+		$("#altaUsuarios h2").html("Alta Usuarios");
+		//Apago la funcion de AltaUsuario
+		$("#frmAltaUsuarios").on("submit",AltaUsuario);
+    	//Enciendo la funcion de BajaUsuario para el mismo boton
+ 	   $("#frmAltaUsuarios").off("submit",BajaUsuario);
 	}
 
 	var AltaUsuario = function()
@@ -74,20 +83,20 @@ var iniciaApp = function()
 		alert($("#frmAltaUsuarios").serialize());
 		var datos = $("#frmAltaUsuarios").serialize();
 		var parametros = "accion=guardaUsuario&"+datos+
-						 "&id="+Math.random();
+		                 "&id="+Math.random();
 		$.ajax({
-			beforeSend: function(){
+			beforeSend:function(){
 				console.log("Guardar al usuario");
 			},
-			cache: false, 
-			type: "POST", //Enviar datos
-			dataType: "json", //Como recibir los datos
-			url:"php/funciones.php", //Donde los vamos a mandar
+			cache: false,
+			type: "POST",
+			dataType: "json",
+			url:"php/funciones.php",
 			data:parametros,
 			success: function(response){
-				if(response.respuesta == true)
+				if(response.respuesta == true )//¬¬
 				{
-					alert("Usuario registrado exitosamente");
+					alert("Usuario registrado correctamente");
 				}
 				else
 				{
@@ -100,11 +109,63 @@ var iniciaApp = function()
 		});
 	}
 
+	var Bajas = function()
+	{
+		$("#altaUsuarios").show("slow");
+		$("#altaUsuarios h2").html("Baja Usuarios");
+		//Desactivo la funcino de AltaUsuario
+    	$("#frmAltaUsuarios").off("submit",AltaUsuario);
+    	//Enciendo la funcion de BajaUsuario para el mismo boton
+ 	   $("#frmAltaUsuarios").on("submit",BajaUsuario);
+	}
+
+	var BajaUsuario = function()
+	{
+		event.preventDefault();
+		//var datos = $("#frmAltaUsuarios").serialize();
+		var datos = "txtNombreUsuario="+$("#txtNombreUsuario").val();
+		var parametros = "accion=bajaUsuario&"+datos+
+		                 "&id="+Math.random();
+		$.ajax({
+			beforeSend:function(){
+				console.log("Baja al usuario");
+			},
+			cache: false,
+			type: "POST",
+			dataType: "json",
+			url:"php/funciones.php",
+			data:parametros,
+			success: function(response){
+				if(response.respuesta == true )
+				{
+					alert("Usuario dado de baja correctamente");
+				}
+				else
+				{
+					alert("No se pudo dar de bnaja la información");
+				}
+			},
+			error: function(xhr,ajax,thrownError){
+
+			}
+		});
+	}
+
 	$("#frmValidaEntrada").on("submit",validarEntrada);
 	$("#btnAltas").on("click",Altas);
 	$("#frmAltaUsuarios").on("submit",AltaUsuario);
+	$("#btnBajas").on("click",Bajas);
 }
 $(document).on("ready",iniciaApp);
+
+
+
+
+
+
+
+
+
 
 
 
