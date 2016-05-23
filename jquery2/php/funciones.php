@@ -89,6 +89,36 @@ function bajaUsuario()
 	print json_encode($salidaJSON);
 }
 
+function consultas()
+{
+	$respuesta = false;
+	mysql_connect("localhost","root","");
+	mysql_select_db("cursopw");
+	$consulta = "select * from usuarios"; //No lleva el sprintf porque no lleva parametros
+	$resultado = mysql_query($consulta);
+	$tabla = "";
+	if(mysql_num_rows($resultado) > 0)
+	{
+		$respuesta = true;
+		$tabla.="<tr>";
+		$tabla.="<th>Usuario</th>";
+		$tabla.="<th>Tipo Usuario</th>";
+		$tabla.="<th>Departamento</th>";
+		$tabla.="</tr>";
+		while($registro = mysql_fetch_array($resultado))
+		{
+			$tabla.="<tr>";
+			$tabla.="<th>".$registro["usuario"]."</td>";
+			$tabla.="<th>".$registro["tipousuario"]."</td>";
+			$tabla.="<th>".$registro["departamento"]."</td>";
+			$tabla.="</tr>";
+		}
+	}
+	$salidaJSON = array('respuesta' => $respuesta,
+					    'tabla'     => $tabla);
+	print json_encode($salidaJSON);
+} 
+
 $accion = $_POST["accion"];
 //Menú principal
 switch ($accion) {
@@ -100,6 +130,9 @@ switch ($accion) {
 		break;
 	case 'bajaUsuario':
 	    bajaUsuario();
+		break;
+	case 'consultas':
+		consultas();
 		break;
 	default:
 		# code...
