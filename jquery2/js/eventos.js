@@ -179,11 +179,22 @@ var iniciaApp = function()
 		});
 	}
 
+	var BajaDinamica = function()
+	{
+		var usuario = $(this).attr("id");
+		alert(usuario);
+	}
+
 	$("#frmValidaEntrada").on("submit",validarEntrada);
 	$("#btnAltas").on("click",Altas);
 	$("#frmAltaUsuarios").on("submit",AltaUsuario);
 	$("#btnBajas").on("click",Bajas);
 	$("#btnConsultas").on("click",Consultas);
+	//Eventos dinamicos
+	//$("#tablaConsultas").on("type[button]","click",BajaDinamica);
+	$("#tablaConsultas").on("click","button",BajaDinamica);
+	//Otra forma
+	//$("#tablaConsultas > input").on("click",BajaDinamica);
 }
 $(document).on("ready",iniciaApp);
 
